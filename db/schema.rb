@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131218194241) do
+ActiveRecord::Schema.define(:version => 20131218205223) do
+
+  create_table "month_data", :force => true do |t|
+    t.string   "month"
+    t.string   "top_movie_title"
+    t.integer  "top_movie_gross"
+    t.integer  "year"
+    t.float    "percent_of_year"
+    t.integer  "number_of_movies_released"
+    t.float    "average_gross"
+    t.float    "average_drop"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "months", :force => true do |t|
+    t.string   "month_name"
+    t.string   "top_movie_title"
+    t.integer  "top_movie_gross"
+    t.integer  "year"
+    t.float    "percent_of_year"
+    t.integer  "number_of_movies_released"
+    t.float    "average_gross"
+    t.float    "average_drop"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
   create_table "movies", :force => true do |t|
     t.string   "title"
