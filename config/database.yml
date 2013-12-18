@@ -51,5 +51,4 @@ production:
   encoding: unicode
   database: film_graphs_production
   pool: 5
-  username: christopherhuyett
   host: localhost

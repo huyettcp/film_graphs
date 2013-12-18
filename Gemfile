@@ -20,19 +20,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers'
+end
+
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'nokogiri'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'd3-rails'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'underscore-rails'
 
-# Deploy with Capistrano
-# gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
