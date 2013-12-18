@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131218205223) do
+ActiveRecord::Schema.define(:version => 20131218212600) do
 
   create_table "month_data", :force => true do |t|
     t.string   "month"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20131218205223) do
     t.float    "average_drop"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.float    "total_month_gross"
   end
 
   create_table "movies", :force => true do |t|
