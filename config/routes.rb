@@ -1,5 +1,5 @@
 FilmGraphs::Application.routes.draw do
-  get "movies/index"
+  get 'months', to: 'months#index'
 
-  root :to => 'movies#index'
+  root :to => 'months#index'
 end

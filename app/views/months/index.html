@@ -1,0 +1,14 @@
+<h1>2012 By the Month</h1>
+
+<script>
+  console.log("hello")
+
+  $.ajax({
+    url: '/months',
+    method: 'GET',
+    dataType: 'json'
+  }).done(function(month){
+    console.log(month[1])
+  })
+
+</script>
