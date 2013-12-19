@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+p {
+    color: #2a5980;
+}
+
+text {
+    color: #2a5980;
+}
+
+text {
+    fill: #2a5980;
+}

@@ -10,7 +10,9 @@ function monthlyData(month){
     dataType: 'json'
   }).done(function(month){
     var w = 1000;
-    var h = 600;
+    var h = 500;
+    var padding = 40;
+     
 
     month_data = [ 
       [1, month[0].total_month_gross],
@@ -27,6 +29,12 @@ function monthlyData(month){
       [12, month[11].total_month_gross]
     ];
 
+
+    var months = ["", "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var formatMonth = function(d) {
+      return months[d % 12];      
+    }
+
     var svg = d3.select("#data_area")
                 .append("svg")
                 .attr("width", w)
@@ -34,13 +42,22 @@ function monthlyData(month){
 
     var xScale = d3.scale.linear()
                         .domain([0, d3.max(month_data, function(d) { return d[0]; })])
-                        .range([0, w]);
+                        .range([padding, w - padding]);
+
 
     var yScale = d3.scale.linear()
                      .domain([0, d3.max(month_data, function(d) { return d[1]; })])
-                     .range([0, h]);
+                     .range([h - padding, padding]);
 
+    var xAxis = d3.svg.axis()
+                      .scale(xScale)
+                      .orient("bottom")
+                      .tickFormat(formatMonth);
 
+    var yAxis = d3.svg.axis()
+                      .scale(yScale)
+                      .orient("left")
+                      .ticks(6)
 
     svg.selectAll("circle")
         .data(month_data)
@@ -52,7 +69,17 @@ function monthlyData(month){
         .attr("cy", function(d) {
           return yScale(d[1]);
         })
-        .attr("r", 8);
+        .attr("r", 6);
+
+    svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + (h - padding) + ")") 
+        .call(xAxis);
+
+    svg.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(" + padding + ",0)")
+      .call(yAxis);
 
   })
 }
