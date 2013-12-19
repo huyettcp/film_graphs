@@ -1,5 +1,5 @@
-namespace :month_data do
-  desc "Generates month data for 2012"
+namespace :month_data_2011 do
+  desc "Generates month data for 2011"
   task :seed => :environment do
 
   require 'nokogiri'
@@ -7,7 +7,7 @@ namespace :month_data do
 
 
 
-  n = Nokogiri::HTML(open("http://www.boxofficemojo.com/monthly/?view=releasedate&chart=byyear&yr=2012&view=releasedate"))
+  n = Nokogiri::HTML(open("http://www.boxofficemojo.com/monthly/?view=releasedate&chart=byyear&yr=2011&view=releasedate"))
   noko = 2
 
   while noko <= 13
@@ -15,7 +15,7 @@ namespace :month_data do
     top_movie_title = n.search("tr[#{noko}]/td[7]").text
     top_movie_gross = n.search("tr[#{noko}]/td[8]").text.gsub("$","").to_f 
     total_month_gross = n.search("tr[#{noko}]/td[2]").text.gsub("$","").gsub(",","").to_f 
-    year = 2012
+    year = 2011
     percent_of_year = n.search("tr[#{noko}]/td[3]").text.gsub("%","").to_f
     number_of_movies_released = n.search("tr[#{noko}]/td[4]").text.to_i
     average_gross = n.search("tr[#{noko}]/td[5]").text.gsub("$","").to_f 
@@ -26,5 +26,4 @@ namespace :month_data do
   end
 end
 end
-
 
