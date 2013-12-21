@@ -7,8 +7,9 @@ class MonthsController < ApplicationController
     end
   end
 
-  def twenty_eleven
-    @months = Month.where("year = 2011").order("id DESC")
+  def get_year
+    year = params[:year]
+    @months = Month.where("year = #{year}").order("id DESC")
     respond_to do |format|
       format.html
       format.json { render :json => @months}

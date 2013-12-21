@@ -1,12 +1,19 @@
 $(document).ready(function(){
   monthlyData();
-  $('#2011').on('click', function(){
-      changeYear();
-    });
+  // $('#2011').on('click', function(){
+  //     changeYear();
+  //   });
 
-})
+  $('.year').on('click', function(){
+    var year = this.id
+    changeYear(year);
+  });
 
-function monthlyData(month){
+});
+
+
+
+function monthlyData(){
     $.ajax({
     url: '/months',
     method: 'GET',
@@ -87,9 +94,10 @@ function monthlyData(month){
   })
 };
 
-function changeYear(month){
+function changeYear(year){
     $.ajax({
-    url: '/twenty_eleven',
+    url: '/get_year',
+    data: {year: year},
     method: 'GET',
     dataType: 'json'
   }).done(function(month){

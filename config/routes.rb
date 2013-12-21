@@ -1,6 +1,6 @@
 FilmGraphs::Application.routes.draw do
   get 'months', to: 'months#index'
-  get 'twenty_eleven', to: 'months#twenty_eleven'
+  get 'get_year', to: 'months#get_year'
 
   root :to => 'months#index'
 end
