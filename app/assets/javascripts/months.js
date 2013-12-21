@@ -1,8 +1,5 @@
 $(document).ready(function(){
   monthlyData();
-  // $('#2011').on('click', function(){
-  //     changeYear();
-  //   });
 
   $('.year').on('click', function(){
     var year = this.id

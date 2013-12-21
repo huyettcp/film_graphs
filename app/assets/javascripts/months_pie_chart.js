@@ -1,7 +1,14 @@
 $(document).ready(function(){
     $('#month_pie').on('click', function(){
-    monthPie();
+        monthPie();
+    })
+
+    $('.year').on('click', function(){
+        var year = $('input:radio[name=year]:checked').id()
+        changeYearPie(year);
     });
+
+
 });
 
 function monthPie(){
@@ -65,7 +72,12 @@ function monthPie(){
             .attr("text-anchor", "middle")                          //center the text on it's origin
             .text(function(d, i) { return data[i].label; });  
             })
+};
+
+function changeYearPie(year){
+    console.log(year)
 }
+
 
 
 
