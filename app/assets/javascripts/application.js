@@ -16,3 +16,4 @@
 //= require d3
 //= require underscore
 //= require months.js
+//= require months_pie_chart.js
