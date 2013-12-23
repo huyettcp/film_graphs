@@ -9,9 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require base
+ *= require layout
+ *= require skeleton
  *= require_tree .
+
  */
 
+@import url(http://fonts.googleapis.com/css?family=Graduate);
 
 .axis path,
 .axis line {
@@ -25,14 +30,84 @@
     font-size: 11px;
 }
 
-p {
-    color: #2a5980;
+.type_of_chart {
+  border: solid 4px #69bd28;
 }
 
-text {
-    color: #2a5980;
-}
 
 text {
     fill: #2a5980;
 }
+
+
+
+#header {
+  background-color: #071629 ;
+  border-bottom: solid 4px #69bd28;
+
+}
+
+#title {
+  font-family: 'Graduate';
+  padding: 10px 0px 6px 60px;
+  color: #eeeeee;
+}
+
+#side_bar {
+  border-bottom: solid 4px #69bd28;
+  border-right: solid 4px #69bd28;
+
+}
+
+#data_area {
+  padding-top: 40px;
+}
+
+#radio {
+  display: inline-block;
+}
+
+#toggler {
+  padding-top: 30px;
+  float: right;
+}
+
+
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] {
+    display:none; 
+    margin:10px;
+
+}
+ 
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+
+    border-bottom: solid 4px #69bd28; 
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#d0d0d0;
+}
+
+
+
+
+
+
+

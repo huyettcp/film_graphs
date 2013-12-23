@@ -33,4 +33,6 @@ gem 'd3-rails'
 
 gem 'underscore-rails'
 
+gem 'skeleton-rails'
+gem 'jquery-ui-rails'
 

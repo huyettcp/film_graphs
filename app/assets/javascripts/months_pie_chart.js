@@ -1,10 +1,14 @@
 $(document).ready(function(){
-    $('#month_pie').on('click', function(){
-        var year = parseInt($('input[name=year]:checked').val())
+    $('#pie').on('click', function(){
+        var year = parseInt($('input[name=radios]:checked').val())
         monthPie(year);
     })
 
-  
+
+     
+
+
+
 
 });
 
@@ -35,8 +39,11 @@ function monthPie(year){
             {"label":"Dec", "value":month[11].total_month_gross},
             ];
     
-    var vis = d3.select("#pie_area")
-        .append("svg:svg")              //create the SVG element inside the <body>
+    d3.select("#data_area").selectAll("svg").remove();
+    var vis = d3.select("#data_area")
+
+        .append("svg")
+        .attr("class", "pie")              //create the SVG element inside the <body>
         .data([data])                   //associate our data with the document
             .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
             .attr("height", h)
@@ -47,7 +54,8 @@ function monthPie(year){
         .outerRadius(r);
  
     var pie = d3.layout.pie()   
-        .sort(null)        //this will create arc data for us given a list of values
+        .sort(null)
+          //this will create arc data for us given a list of values
         .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
  
     var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)

@@ -17,3 +17,5 @@
 //= require underscore
 //= require months.js
 //= require months_pie_chart.js
+//= require simple_expand.js
+//= require jquery.ui.all

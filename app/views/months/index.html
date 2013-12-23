@@ -1,20 +1,53 @@
-<h1>Movie Data By the Month</h1> 
-<h2 id="month_pie">Pie Chart</h2>
+
+<div class = 'container'>
+<!-- <h1>Movie Data By the Month</h1> 
+<h2 id="month_pie">Pie Chart</h2> -->
 <!-- <h4 id="2010" class="year">2010</h4>
 <h4 id="2011" class="year">2011</h4>
 <h4 id="2012" class="year">2012</h4> -->
 
-<input type="radio" name="year" value="2010" class="year" id="2010">2010</input>
-<input type="radio" name="year" value="2011" class="year" id="2011">2011</input>
-<input type="radio" name="year" value="2012" class="year" id="2012">2012</input>
+<div id='side_bar' class='three columns'>
+  <h3>Box Office</h3>
+  <div>
+    <h4>By Month</h4>
+      <div>
+        <h5>Year</h5>
+      </div>
+  </div>
 
-<div id='data_area'>
-  <g class="axis" transform="translate(0,280)">
 </div>
 
-<div id='pie_area'></div>
+
+<div class='nine columns' id='toggler'>
+  <div id='chart_selector'>
+      <input type="radio" name="cool" value="scatter" id="scatter" class ="type_of_chart">
+      <label for="scatter">Scatter</label>
+      <input type="radio" name="cool" value="pie" id="pie" class ="type_of_chart">
+      <label for="pie">Pie</label>
 
 
-<body>
-</body>
+  </div>
+  <div id='year_selector'>
+    <input type="radio" name="radios" value="2010" id="2010" class ="year">
+      <label for="2010">2010</label>
+    <input type="radio" name="radios" value="2011" id="2011" class ="year" >
+      <label for="2011">2011</label>
+    <input type="radio" name="radios" value="2012" id="2012" class ="year" checked>
+      <label for="2012">2012</label>
+  </div>
+    <g class="axis" transform="translate(0,280)">
+</div>
+
+<div id='data_area' class='nine columns'></div>
+
+
+
+
+
+
+
+ 
+
+</div>
+</div>
 
