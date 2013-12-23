@@ -2,10 +2,19 @@ $(document).ready(function(){
     $('#pie').on('click', function(){
         var year = parseInt($('input[name=radios]:checked').val())
         monthPie(year);
-    })
+    });
 
 
-     
+
+
+
+  $('.year').on('click', function(){
+        if ( $('input[name=cool]:checked').val() == "pie" ) {
+        var year = parseInt($('input[name=radios]:checked').val())
+        monthPie(year);
+    }
+
+  });
 
 
 

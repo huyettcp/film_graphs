@@ -2,8 +2,15 @@ $(document).ready(function(){
   monthlyData();
 
   $('.year').on('click', function(){
-    var year = this.id
+    var year = parseInt($('input[name=radios]:checked').val())
     changeYear(year);
+  });
+
+   
+
+
+  $('#scatter').on('click', function(){
+    monthlyData()
   });
 
 
@@ -43,6 +50,8 @@ function monthlyData(){
     var formatMonth = function(d) {
       return months[d % 12];      
     }
+
+    d3.select("#data_area").selectAll("svg").remove();
 
     var svg = d3.select("#data_area")
                 .append("svg")
@@ -122,6 +131,7 @@ function changeYear(year){
 
 
     var svg = d3.select("#data_area")
+               
                 .attr("width", w)
                 .attr("height", h);
     var xScale = d3.scale.linear()
