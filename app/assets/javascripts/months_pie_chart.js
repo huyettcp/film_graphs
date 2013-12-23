@@ -1,19 +1,17 @@
 $(document).ready(function(){
     $('#month_pie').on('click', function(){
-        monthPie();
+        var year = parseInt($('input[name=year]:checked').val())
+        monthPie(year);
     })
 
-    $('.year').on('click', function(){
-        var year = $('input:radio[name=year]:checked').id()
-        changeYearPie(year);
-    });
-
+  
 
 });
 
-function monthPie(){
+function monthPie(year){
     $.ajax({
         url: '/month_pie',
+        data: {year: year},
         method: 'GET',
         dataType: 'json'
     }).done(function(month){
@@ -74,9 +72,7 @@ function monthPie(){
             })
 };
 
-function changeYearPie(year){
-    console.log(year)
-}
+
 
 
 
