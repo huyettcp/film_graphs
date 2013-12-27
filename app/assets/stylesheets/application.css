@@ -39,6 +39,10 @@ text {
     fill: #2a5980;
 }
 
+#info_area {
+  border-left: solid 2px #69bd28;
+}
+
 
 
 #header {

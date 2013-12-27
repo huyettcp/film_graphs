@@ -48,18 +48,18 @@ function monthlyData(){
      
 
     month_data = [ 
-      [1, month[0].total_month_gross, "January", month[0].top_movie_title],
-      [2, month[1].total_month_gross, "February", month[1].top_movie_title],
-      [3, month[2].total_month_gross],
-      [4, month[3].total_month_gross],
-      [5, month[4].total_month_gross],
-      [6, month[5].total_month_gross],
-      [7, month[6].total_month_gross],
-      [8, month[7].total_month_gross],
-      [9, month[8].total_month_gross],
-      [10, month[9].total_month_gross],
-      [11, month[10].total_month_gross],
-      [12, month[11].total_month_gross]
+      [1, month[0].total_month_gross, month[0].month_name, month[0].top_movie_title],
+      [2, month[1].total_month_gross, month[1].month_name, month[1].top_movie_title],
+      [3, month[2].total_month_gross, month[2].month_name, month[2].top_movie_title],
+      [4, month[3].total_month_gross, month[3].month_name, month[3].top_movie_title],
+      [5, month[4].total_month_gross, month[4].month_name, month[4].top_movie_title],
+      [6, month[5].total_month_gross, month[5].month_name, month[5].top_movie_title],
+      [7, month[6].total_month_gross, month[6].month_name, month[6].top_movie_title],
+      [8, month[7].total_month_gross, month[7].month_name, month[7].top_movie_title],
+      [9, month[8].total_month_gross, month[8].month_name, month[8].top_movie_title],
+      [10, month[9].total_month_gross, month[9].month_name, month[9].top_movie_title],
+      [11, month[10].total_month_gross, month[10].month_name, month[10].top_movie_title],
+      [12, month[11].total_month_gross, month[11].month_name, month[11].top_movie_title]
     ];
 
 
@@ -147,18 +147,18 @@ function changeYear(year){
      
 
     month_data = [ 
-      [1, month[0].total_month_gross],
-      [2, month[1].total_month_gross],
-      [3, month[2].total_month_gross],
-      [4, month[3].total_month_gross],
-      [5, month[4].total_month_gross],
-      [6, month[5].total_month_gross],
-      [7, month[6].total_month_gross],
-      [8, month[7].total_month_gross],
-      [9, month[8].total_month_gross],
-      [10, month[9].total_month_gross],
-      [11, month[10].total_month_gross],
-      [12, month[11].total_month_gross]
+      [1, month[0].total_month_gross, month[0].month_name, month[0].top_movie_title],
+      [2, month[1].total_month_gross, month[1].month_name, month[1].top_movie_title],
+      [3, month[2].total_month_gross, month[2].month_name, month[2].top_movie_title],
+      [4, month[3].total_month_gross, month[3].month_name, month[3].top_movie_title],
+      [5, month[4].total_month_gross, month[4].month_name, month[4].top_movie_title],
+      [6, month[5].total_month_gross, month[5].month_name, month[5].top_movie_title],
+      [7, month[6].total_month_gross, month[6].month_name, month[6].top_movie_title],
+      [8, month[7].total_month_gross, month[7].month_name, month[7].top_movie_title],
+      [9, month[8].total_month_gross, month[8].month_name, month[8].top_movie_title],
+      [10, month[9].total_month_gross, month[9].month_name, month[9].top_movie_title],
+      [11, month[10].total_month_gross, month[10].month_name, month[10].top_movie_title],
+      [12, month[11].total_month_gross, month[11].month_name, month[11].top_movie_title]
     ];
 
   
