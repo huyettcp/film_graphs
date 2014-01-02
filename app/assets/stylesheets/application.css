@@ -9,9 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require base
- *= require layout
- *= require skeleton
+ *= require screen.css
+ *= require grid.css
  *= require_tree .
 
  */
@@ -39,9 +38,7 @@ text {
     fill: #2a5980;
 }
 
-#info_area {
-  border-left: solid 2px #69bd28;
-}
+
 
 
 
@@ -58,25 +55,22 @@ text {
 }
 
 #side_bar {
-  border-bottom: solid 4px #69bd28;
-  border-right: solid 4px #69bd28;
+
 
 }
 
 #data_area {
   padding-top: 40px;
+  max-width: 900px;
 }
 
 
 
-#toggler {
-  padding-top: 30px;
-  padding-bottom: 30px;
 
-}
+
 
 #butt {
-    padding-top: 30px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -101,7 +95,7 @@ input[type=radio] {
 */
 input[type=radio] + label {
     display:inline-block;
-    margin:-2px;
+    margin: 0px;
     padding: 12px 24px;
     background-color: #e7e7e7;
 

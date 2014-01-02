@@ -45,7 +45,8 @@ function monthlyData(){
     var w = 800;
     var h = 400;
     var padding = 40;
-     
+    
+    console.log(month)
 
     month_data = [ 
       [1, month[0].total_month_gross, month[0].month_name, month[0].top_movie_title],
@@ -75,7 +76,6 @@ function monthlyData(){
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h)
-                .attr("class", "ten columns")
                 .attr("preserveAspectRatio", "none");
 
     var xScale = d3.scale.linear()
