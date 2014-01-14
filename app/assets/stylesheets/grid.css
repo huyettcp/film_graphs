@@ -1,5 +1,6 @@
 /* Dead Simple Grid (c) 2012 Vladimir Agafonkin */
 
+
 .col {
 	padding: 0 1.5em;
 }
@@ -30,8 +31,11 @@
 @media only screen and (min-width: 30em) {
 
     .content { width: 60%; }
-    .sidebar { width: 30%; }
-    .menu	{ width: 10%; }
+    .sidebar { width: 40%; }
     .stuff { width: 30%; }
     .info { width: 50%; }
+    #poster {width: 100%;}
+
+    
+    
 }

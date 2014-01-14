@@ -45,13 +45,15 @@ text {
 #header {
   background-color: #071629 ;
   border-bottom: solid 4px #69bd28;
+  margin-bottom: 40px;
 
 }
 
 #title {
   font-family: 'Graduate';
-  padding: 10px 0px 6px 60px;
+  padding: 20px 0px 6px 60px;
   color: #eeeeee;
+  font-size: 30px;
 }
 
 #side_bar {
@@ -74,9 +76,11 @@ text {
   padding-bottom: 30px;
 }
 
-#poster {
-  max-height: 264px;
+#toggler {
+  margin-top: 40px;
 }
+
+
 
 
 /*
@@ -99,7 +103,7 @@ input[type=radio] + label {
     padding: 12px 24px;
     background-color: #e7e7e7;
 
-    border-bottom: solid 4px #69bd28; 
+    border-top: solid 4px #69bd28; 
 }
 /*
  Change background color for label next to checked radio button
