@@ -27,4 +27,4 @@ namespace :month_data do
 end
 end
 
-
+  
