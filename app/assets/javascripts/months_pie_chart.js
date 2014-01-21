@@ -74,7 +74,8 @@ function monthPie(year){
         .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
         .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
             .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
-                .attr("class", "slice");    //allow us to style things in the slices (like text)
+                .attr("class", "slice"); 
+
  
         arcs.append("svg:path")
                 .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
