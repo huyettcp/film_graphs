@@ -1,5 +1,6 @@
 $(document).ready(function(){
-getBarData()
+getBarData();
+alert("I am an alert box!");
 
 });
 function getBarData(){
