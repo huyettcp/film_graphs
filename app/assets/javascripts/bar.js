@@ -1,6 +1,6 @@
 $(document).ready(function(){
 getBarData();
-alert("I am an alert box!");
+alert("Hover over the dots for movie information!");
 
 });
 function getBarData(){

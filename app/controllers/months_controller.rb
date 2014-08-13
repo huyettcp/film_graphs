@@ -1,6 +1,6 @@
 class MonthsController < ApplicationController
   def index
-    @months = Month.where("year = 2012").order("id DESC")
+    @months = Month.where("year = 2013").order("id DESC")
     respond_to do |format|
       format.html
       format.json { render :json => @months}
